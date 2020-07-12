@@ -9,9 +9,18 @@
     This is a demo application for the course
     <em>Getting Started with Flask</em>
     </p>
-    <img src="/static/flasklogo.png">
-    <p>
-        {{message}}
-    </p>
+
+    <h2>
+        <ul>
+            {% for card in cards %}
+            <li>
+                <a href="{{url_for('card_view', index=loop.index0)}}">
+                    {{card.question}}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </h2>
+
 </body>
 </html>
