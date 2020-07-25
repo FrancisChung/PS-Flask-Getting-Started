@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
     <title>Flash Card</title>
 </head>
 <body>
@@ -22,6 +23,6 @@
             {% endif %}
         </button>
     </p>
-    <a href="{{url_for('remove_card', index=index}}">Remove this card</a>
+    <a href="{{url_for('remove_card', index=index)}}">Remove this card</a>
 </body>
 </html>
